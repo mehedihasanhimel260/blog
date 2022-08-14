@@ -9,8 +9,8 @@
                         Dashboard
                     </a>
                     <div class="sb-sidenav-menu-heading">Interface</div>
-                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-                        data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts"
+                        aria-expanded="false" aria-controls="collapseLayouts">
                         <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                         Category
                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -22,8 +22,8 @@
                             <a class="nav-link" href="{{ '/manage/category' }}">Manage Category</a>
                         </nav>
                     </div>
-                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-                        data-bs-target="#collapsepost" aria-expanded="false" aria-controls="collapsepost">
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsepost"
+                        aria-expanded="false" aria-controls="collapsepost">
                         <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                         post
                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -36,8 +36,8 @@
                         </nav>
                     </div>
 
-                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-                        data-bs-target="#collapsecomment" aria-expanded="false" aria-controls="collapsepost">
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsecomment"
+                        aria-expanded="false" aria-controls="collapsepost">
                         <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                         Comment
                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -49,6 +49,23 @@
                             <a class="nav-link" href="{{ '/manage/post' }}">Manage Post</a>
                         </nav>
                     </div>
+
+
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsesection"
+                        aria-expanded="false" aria-controls="collapsepost">
+                        <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                        Section
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="collapsesection" aria-labelledby="headingOne"
+                        data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="{{ '/add/section' }}">Add section</a>
+                            <a class="nav-link" href="{{ '/manage/section' }}">Manage section</a>
+                        </nav>
+                    </div>
+
+
                 </div>
             </div>
             <div class="sb-sidenav-footer">

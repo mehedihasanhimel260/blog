@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\commentsControler;
+use App\Http\Controllers\Admin\SectionsController;
 use App\Http\Controllers\ForntendController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
@@ -78,6 +79,13 @@ Route::group(['middleware' => 'admin'], function () {
 
     Route::get('/manage/coment', [commentsControler::class, 'manageComment']);
     Route::get('/comment/delete/{id}', [commentsControler::class, 'deleteComment']);
+    //commentsControler End
+
+    //commentsControler Start
+
+
+    Route::get('/add/section', [SectionsController::class, 'create']);
+    Route::post('/section/store', [SectionsController::class, 'store']);
     //commentsControler End
 
 
