@@ -5,7 +5,7 @@
     <!-- general form elements -->
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Create Post</h3>
+            <h3 class="card-title">Manage section</h3>
         </div>
         <!-- /.card-header -->
 
@@ -41,7 +41,8 @@
                     <select name="section_1" class="form-control" id="exampleFormControlSelect1">
                         <option selected>Select Section</option>
                         @foreach ($categories as $catacgory)
-                        <option value="{{ $catacgory->id }}">{{ $catacgory->name }}</option>
+                        <option value="{{ $catacgory->id }}"
+                            {{ $catacgory->id ==  $catacgory->id  ? 'selected ' : '' }}>{{ $catacgory->name }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -50,7 +51,8 @@
                     <select name="section_2" class="form-control" id="exampleFormControlSelect1">
                         <option selected>Select Section</option>
                         @foreach ($categories as $catacgory)
-                        <option value="{{ $catacgory->id }}">{{ $catacgory->name }}</option>
+                        <option value="{{ $catacgory->id }}"
+                            {{ $catacgory->id ==  $catacgory->id  ? 'selected ' : '' }}>{{ $catacgory->name }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -59,7 +61,8 @@
                     <select name="section_3" class="form-control" id="exampleFormControlSelect1">
                         <option selected>Select Section</option>
                         @foreach ($categories as $catacgory)
-                        <option value="{{ $catacgory->id }}">{{ $catacgory->name }}</option>
+                        <option value="{{ $catacgory->id }}"
+                            {{ $catacgory->id ==  $catacgory->id  ? 'selected ' : '' }}>{{ $catacgory->name }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -68,12 +71,11 @@
             <!-- /.card-body -->
 
             <div class="card-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Save</button>
             </div>
         </form>
     </div>
     <!-- /.card -->
-
 
 </div>
 @endsection

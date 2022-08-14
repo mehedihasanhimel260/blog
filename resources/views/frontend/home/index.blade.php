@@ -38,31 +38,36 @@
 
             {{ $posts->links() }}
         </div>
+
+        @foreach ($webOptions as $webOption)
         <div class="col-lg-4 col-md-5">
+            @section('title')
+            {{ $webOption->website_title }}
+            @endsection
+
             <div class="widget text-center">
                 <img class="author-thumb-sm rounded-circle d-block mx-auto"
-                    src="{{ asset('/frontend/assets/') }}/images/author-sm.png" alt="">
+                    src="{{ asset('/post/' . $webOption->about_me_image) }}" alt="" width="230px" height="230px">
                 <h2 class="widget-title text-white d-inline-block mt-4">About Me</h2>
-                <p class="mt-4">Lorem ipsum dolor sit coectetur adiing elit. Tincidunfywjt leo mi,
-                    viearra urna. Arcu ve isus, condimentum ut vulpate cursus por turpis.</p>
+                <p class="mt-4">{{ $webOption->about_me_short }}</p>
                 <ul class="list-inline mt-3">
                     <li class="list-inline-item">
-                        <a href="#!" class="text-white text-primary-onHover p-2">
+                        <a href="{{ $webOption->twitter_link }}" class="text-white text-primary-onHover p-2">
                             <span class="fab fa-twitter"></span>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#!" class="text-white text-primary-onHover p-2">
+                        <a href="{{ $webOption->fb_link }}" class="text-white text-primary-onHover p-2">
                             <span class="fab fa-facebook-f"></span>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#!" class="text-white text-primary-onHover p-2">
+                        <a href="{{ $webOption->instagram_link }}" class="text-white text-primary-onHover p-2">
                             <span class="fab fa-instagram"></span>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#!" class="text-white text-primary-onHover p-2">
+                        <a href="{{ $webOption->linkedin_link }}" class="text-white text-primary-onHover p-2">
                             <span class="fab fa-linkedin-in"></span>
                         </a>
                     </li>
@@ -72,8 +77,8 @@
 
             <div class="widget bg-dark p-4 text-center">
                 <h2 class="widget-title text-white d-inline-block mt-4">Subscribe Blog</h2>
-                <p class="mt-4">Lorem ipsum dolor sit coectetur elit. Tincidu nfywjt leo mi, urna. Arcu
-                    ve isus, condimentum ut vulpate cursus por.</p>
+                <p class="mt-4">{{ $webOption->subscribe_blog }}</p>
+                @endforeach
                 <form action="#">
                     <div class="form-group">
                         <input type="email" class="form-control bg-transparent rounded-0 my-4"
@@ -104,7 +109,8 @@
 
                 <div class="card post-item bg-transparent border-0 mb-5">
                     <a href="{{ url('/singlepost/' . $featurepost->id) }}">
-                        <img class="card-img-top rounded-0" src="{{ asset('/post/' . $featurepost->image) }}" alt="">
+                        <img class="card-img-top rounded-0" src="{{ asset('/post/' . $featurepost->image) }}" alt=""
+                            width="480px" height="568px">
                     </a>
                     <div class="card-body px-0">
                         <h2 class="card-title">

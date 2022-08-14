@@ -86,6 +86,8 @@ Route::group(['middleware' => 'admin'], function () {
 
     Route::get('/add/section', [SectionsController::class, 'create']);
     Route::post('/section/store', [SectionsController::class, 'store']);
+    Route::get('/weboption/manage', [SectionsController::class, 'weboption']);
+    Route::post('/weboption/store', [SectionsController::class, 'weboptionstore']);
     //commentsControler End
 
 

@@ -60,10 +60,35 @@
                     <div class="collapse" id="collapsesection" aria-labelledby="headingOne"
                         data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="{{ '/add/section' }}">Add section</a>
-                            <a class="nav-link" href="{{ '/manage/section' }}">Manage section</a>
+                            <a class="nav-link" href="{{ '/add/section' }}">Manage section</a>
                         </nav>
                     </div>
+
+
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsPageOption"
+                        aria-expanded="false" aria-controls="collapsepost">
+                        <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                        Page Option
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="collapsPageOption" aria-labelledby="headingOne"
+                        data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="{{ '/weboption/manage' }}">Manage section</a>
+                        </nav>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
                 </div>

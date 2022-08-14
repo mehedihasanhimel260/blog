@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\category;
 use App\Models\Comment;
+use App\Models\pageOption;
 use App\Models\Section;
 use Illuminate\Http\Request;
 
@@ -12,13 +13,13 @@ class ForntendController extends Controller
 {
     public function show(Request $Request)
     {
-
+        $webOptions = pageOption::get();
         $Section = Section::find(1);
         $id = $Section->section_1;
         $featureposts = Post::with('category')->where('catecory_id', $id)->paginate(2);
         $categories = category::orderBy('id', 'DESC')->get();
         $posts = Post::with('category')->paginate(3);
-        return view('frontend.home.index', compact('categories', 'posts', 'featureposts'));
+        return view('frontend.home.index', compact('categories', 'posts', 'featureposts', 'webOptions'));
     }
     public function singlepost($id)
     {

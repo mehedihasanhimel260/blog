@@ -1,7 +1,8 @@
    <aside>
        <div class="sidenav position-sticky d-flex flex-column justify-content-between">
            <a class="navbar-brand" href="{{ url('/') }}" class="logo">
-               <h1> Mehedi Vlogs </h1>
+               <h1> @yield('title')</h1>
+
                <!-- <img  src="{{ asset('/frontend/assets/') }}/images/logo.png" alt=""> -->
            </a>
            <!-- end of navbar-brand -->
